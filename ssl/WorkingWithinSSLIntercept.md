@@ -118,7 +118,9 @@ export CURL_CA_BUNDLE=/path/to/cert.pem
 Java applications use a system/application keystore for CA certificates in a file called "cacerts", and the DOIRootCA can be imported with the certificate file from the command line, with administrative rights:
 
 e.g. C:\Program Files\Java\jdk1.8.0_101\jre\lib\security
-> keytool -import -file DOIRootCA.crt -keystore cacerts
+```sh
+keytool -import -file DOIRootCA.crt -alias doiRootCa -keystore cacerts
+```
 
 ## Node
 Node appears to ignore the SSL_CERT_FILE environment variable, although
